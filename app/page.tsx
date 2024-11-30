@@ -2,100 +2,67 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <div className="md:h-screen pt-8">
+        <div className="md:h-full flex flex-col-reverse md:grid grid-cols-2 items-center">
+          <div className="h-full flex flex-col items-center md:items-start justify-center mb-16">
+            <Image src="/logo.svg" alt="logo" width={364} height={151} priority className="mt-8 w-[80vw] md:w-[45vw]" />
+            <div className="mt-6 text-xl">Bridging the digital divide for a more inclusive future.</div>
+          </div>
+          <div className="place-self-center relative grid grid-cols-2">
+            <div className="size-[25vh] md:size-[40vh] rounded-full col-span-2 row-span-2 bg-cover bg-center bg-primary flex items-center justify-center" style={{ backgroundImage: "url('/box.jpeg')" }}></div>
+            {/* <div></div>
+            <div></div>
+            <div className="size-[30vh] rounded-full bg-cover bg-center bg-primary flex items-center justify-center" style={{ backgroundImage: "url('/box.jpeg')" }}></div> */}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+      <div className="p-4 md:p-8 rounded bg-primary/30">
+      <div className="text-4xl font-bold">2.7 billion people, or one-third of the world&apos;s population, do not have internet access.</div>
+      <div className="mb-4">However, not everyone is up-to-speed with digital literacy nowadays.</div>
+      <div className="flex flex-col md:grid grid-cols-3 gap-6">
+        <div className="p-4 border-2 bg-white border-black rounded-md">
+          <div className="text-5xl font-bold text-primary">25% of US citizens</div>
+          <div className="text-xl"> have <span className="font-bold">&quot;very low&quot;</span> digital skills.</div>
+        </div>
+        <div className="p-4 border-2 bg-white border-black rounded-md">
+          <div className="text-5xl font-bold text-primary">6.8 million people</div>
+          <div className="text-xl">have <span className="font-bold">&quot;ultra-low digital skills&quot;</span>. That&apos;s 13% of the population!</div>
+        </div>
+        <div className="p-4 border-2 bg-white border-black rounded-md">
+          <div className="text-5xl font-bold text-primary">60%</div>
+          <div className="text-xl">of people without digital literacy skills stay there- indicating it is <span className="font-bold">very hard for people with the lowest digital skills to improves</span></div>
+        </div>
+      </div>
+      </div>
+      <div className="mt-4 min-h-screen flex flex-col justify-center">
+        <div className="text-6xl">But we are here to <span className="font-bold">break the division</span>.</div>
+        <div className="text-4xl mt-4">We provide resources to help you be proficient in digital literacy, and access free local WiFi.</div>
+        <div className="mt-20 text-4xl">Ready to <a href="/digital-literacy" className="underline underline-offset-4 decoration-primary hover:text-primary transition">get started</a>? Start with our Google Suite videos!</div>
+        <div className="flex flex-col md:grid grid-cols-3 gap-6 mt-6">
+          <div className="bg-primary/20 p-4 rounded-lg flex flex-col justify-between">
+            <div>
+              <div className="text-2xl font-bold">Google Classroom</div>
+              <div className="text-lg">Google Classroom basics: How to find your assignments, turn in work, and keep up with your class.</div>
+            </div>
+            <video src="/gclassroom.mov" controls></video>
+          </div>
+          <div className="bg-primary/20 p-4 rounded-lg flex flex-col justify-between">
+            <div>
+              <div className="text-3xl font-bold">Google Drive</div>
+              <div className="text-lg">Get started with Google Drive! Learn how to upload, organize, and share your files easily.</div>
+            </div>
+            <video src="/gdrive.mov" controls></video>
+          </div>
+          <div className="bg-primary/20 p-4 rounded-lg flex flex-col justify-between">
+            <div>
+              <div className="text-3xl font-bold">Google Slides</div>
+              <div className="text-lg">New to Google Slides? Here&apos;s a simple walkthrough on making and sharing your first presentation.</div>
+            </div>
+            <video src="/gslides.mov" controls></video>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
